@@ -45,7 +45,8 @@
           <li class="header-item">
             <a href="mailto:info@devstudio.com" class="header-contacts link">
               <svg class="header-icon" width="16" height="12">
-                <use href="./images/symbol-defs-opt.svg#icon-envelope"></use></svg>info@devstudio.com</a>
+                <use href="./images/symbol-defs-opt.svg#icon-envelope"></use></svg>info@devstudio.com</a
+            >
           </li>
 
           <li class="header-item">
@@ -62,7 +63,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="hero-btn">Замовити послугу</button>
+          <button type="button" class="hero-btn" data-modal-open>Замовити послугу</button>
         </div>
       </section>
 
@@ -129,15 +130,24 @@
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="work-list list">
             <li class="work-item">
-              <img src="./images/img1.jpg" alt="верстка" width="370" />
+              <div class="work-example">
+                <img src="./images/img1.jpg" alt="верстка" width="370" />
+                <p class="work-examples">Десктопні додатки</p>
+              </div>
             </li>
 
             <li class="work-item">
-              <img src="./images/img2.jpg" alt="розробка додатків" width="370" />
+              <div class="work-example">
+                <img src="./images/img2.jpg" alt="розробка додатків" width="370" />
+                <p class="work-examples">Мобільні додатки</p>
+              </div>
             </li>
 
             <li class="work-item">
-              <img src="./images/img3.jpg" alt="дизайн" width="370" />
+              <div class="work-example">
+                <img src="./images/img3.jpg" alt="дизайн" width="370" />
+                <p class="work-examples">Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -417,5 +427,21 @@
         </div>
       </div>
     </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО -->
+
+    <div class="backdrop is-hidden" data-modal>
+      <div>
+        <div class="modal">
+          <button type="button" class="modal-close" data-modal-close>
+            <svg class="button-modal-close">
+              <use href="./images/symbol-defs-opt.svg#icon-close-black-18dp"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
